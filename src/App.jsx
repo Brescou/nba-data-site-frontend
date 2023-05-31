@@ -1,10 +1,10 @@
-import React, { useState, createContext, useEffect } from "react"
+import React, { useState, createContext } from "react"
 import { MantineProvider, ColorSchemeProvider } from "@mantine/core"
 
-import { TopBar } from "./components/TopBar"
-// import Login from "./pages/Login"
+// import { TopBar } from "./components/TopBar"
+import Login from "./pages/Login/Login"
 
-export const AuthContext = createContext()
+export const AuthContext = createContext(null)
 
 const App = () => {
     const [authToken, setAuthToken] = useState(
@@ -13,9 +13,6 @@ const App = () => {
     const [colorScheme, setColorScheme] = useState("light")
     const toggleColorScheme = (value) =>
         setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"))
-    useEffect(() => {
-        localStorage.setItem("token", authToken)
-    }, [authToken])
 
     return (
         <ColorSchemeProvider
@@ -27,10 +24,12 @@ const App = () => {
                 withGlobalStyles
                 withNormalizeCSS
             >
-                <AuthContext.Provider value={{ authToken, setAuthToken }}>
-                    {/* <Login /> */}
-                    <TopBar />
-                </AuthContext.Provider>{" "}
+                <AuthContext.Provider
+                    value={{ token: authToken, setToken: setAuthToken }}
+                >
+                    <Login />
+                    {/* <TopBar /> */}
+                </AuthContext.Provider>
             </MantineProvider>
         </ColorSchemeProvider>
     )
