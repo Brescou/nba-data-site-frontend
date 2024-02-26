@@ -27,3 +27,6 @@ yarn.lock
 /.idea/nba-data-site-frontend.iml
 /.idea/codeStyles/Project.xml
 /.idea/vcs.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/workspace.xml
+/.idea/.gitignore
