@@ -8,34 +8,7 @@ import { BrowserRouter } from "react-router-dom"
 export const AuthContext = createContext(null)
 
 const App = () => {
-    const [authToken, setAuthToken] = useState(
-        () => localStorage.getItem("token") || null,
-    )
-    const [colorScheme, setColorScheme] = useState("light")
-    const toggleColorScheme = (value) =>
-        setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"))
-
-    return (
-        <ColorSchemeProvider
-            colorScheme={colorScheme}
-            toggleColorScheme={toggleColorScheme}
-        >
-            <MantineProvider
-                theme={{ colorScheme }}
-                withGlobalStyles
-                withNormalizeCSS
-            >
-                <BrowserRouter>
-                    <AuthContext.Provider
-                        value={{ token: authToken, setToken: setAuthToken }}
-                    >
-                        {/* <Login /> */}
-                        <Base />
-                    </AuthContext.Provider>
-                </BrowserRouter>
-            </MantineProvider>
-        </ColorSchemeProvider>
-    )
+    return (<h1>App</h1>)
 }
 
 export default App

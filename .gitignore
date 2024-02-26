@@ -22,3 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 yarn.lock
+/.idea/modules.xml
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/nba-data-site-frontend.iml
+/.idea/codeStyles/Project.xml
+/.idea/vcs.xml
