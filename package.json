@@ -14,7 +14,7 @@
         "@mantine/notifications": "^7.0.0",
         "@mantine/prism": "^6.0.19",
         "@mantine/spotlight": "^7.0.0",
-        "@tabler/icons-react": "^2.18.0",
+        "@tabler/icons-react": "^3.0.0",
         "@testing-library/jest-dom": "^6.4.2",
         "@testing-library/react": "^14.0.0",
         "@testing-library/user-event": "^14.0.0",
